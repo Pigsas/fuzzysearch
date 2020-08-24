@@ -1,0 +1,22 @@
+{
+    "name": "pigsas/fuzzysearch",
+    "description": "Prestashop module",
+    "authors": [
+        {
+            "name": "Pigsas",
+            "email": "b.kazimieras17@gmail.com"
+        }
+    ],
+    "require": {
+        "teamtnt/tntsearch": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pigsas\\FuzzySearch\\": "src/"
+        }
+    },
+    "config": {
+        "prepend-autoloader": false
+    },
+    "type": "prestashop-module"
+}
