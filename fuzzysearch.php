@@ -17,7 +17,6 @@ class FuzzySearch extends Module
         $this->version = '1.0.0';
         $this->author = 'Pigsas';
         $this->bootstrap = true;
-        $this->controllers = ['ajax', 'cron'];
 
         parent::__construct();
         $this->autoload();
