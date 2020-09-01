@@ -60,9 +60,9 @@ class SearchService extends TNTSearch {
     public function searchAll($phrase)
     {
         $startTimer = microtime(true);
-        $keywords   = $this->breakIntoTokens($phrase);
+        
+        $keywords = explode(' ', Search::sanitize($phrase, $this->context->language->id, false, $this->context->language->iso_code));
         $keywords   = new Collection($keywords);
-
         $keywords = $keywords->map(function ($keyword) {
             return $this->stemmer->stem($keyword);
         });
